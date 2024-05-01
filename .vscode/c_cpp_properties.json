@@ -4,8 +4,14 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:/vcpkg/installed/x64-windows/include"
+                "C:/vcpkg/installed/x64-windows/include/**"
             ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "C:/vcpkg/installed/x64-windows/include/**"
+                ]
+            },
             "defines": [
                 "_DEBUG",
                 "UNICODE",
