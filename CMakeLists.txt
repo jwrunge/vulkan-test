@@ -1,7 +1,10 @@
 cmake_minimum_required(VERSION 3.15)
-project(renderer)
+project(render CXX)
 
-find_package(vulkanHeaders REQUIRED)
+add_executable(render src/render.cpp src/main.cpp)
 
-add_executable(${PROJECT_NAME} src/main.cpp)
-target_link_libraries(${PROJECT_NAME} vulkanHeaders::vulkanHeaders)
+install(TARGETS render DESTINATION "."
+  RUNTIME DESTINATION bin
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+)
